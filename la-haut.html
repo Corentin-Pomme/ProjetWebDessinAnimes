@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projet</title>
+	<style type="text/css">
+		html
+		{
+			font-family: COMIC SANS MS;
+		}
+		#contenant
+		{
+			display: flex;
+			width: 100%;
+			border-top: 0.3px rgb(31,133,222) solid;
+			border-bottom: 0.3px rgb(31,133,222) solid;
+			justify-content: center;
+			height: 50px;
+			margin-bottom: 80px;
+		}
+
+		#contenu
+		{
+			width: 80%;
+			display: flex;
+			justify-content: center;
+			
+		}
+
+		ul
+		{
+			width : 850px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			
+		}
+
+		li
+		{
+			align-content: stretch;
+			text-align: center;
+			font-size: 17px;
+			flex : 1;
+			list-style: none;
+			margin-right: 0;
+			color : rgb(140,140,140);
+			height: 50px;
+		}
+
+		.li_nav img
+		{
+			height: 10px;
+			width: 10px;
+		}
+
+		li:hover
+		{
+			color : black;
+			cursor: pointer;
+		}
+
+
+		.reste_a_afficher
+		{
+			display: none;
+			width: 65%;
+			border : 0.05px rgb(31,133,222) solid;
+			background-color: rgb(250,250,250);
+			height: 60px;
+			margin-top: 16px;
+			border-radius: 5px;
+
+		}
+
+		.reste_a_afficher a:hover, li a:hover
+		{
+			color:black;
+		}
+
+		li a
+		{
+			text-decoration: none;
+			color:rgb(140,140,140);
+		}
+
+		.reste_a_afficher a
+		{
+			color:rgb(180,180,180);
+			text-decoration: none;
+			margin-top: 3px;
+			font-size: 14px;
+		}
+
+		li:hover .reste_a_afficher
+		{
+			display: flex;
+			flex-direction: column;
+		}
+
+
+
+		.img_nav
+		{
+			height : 18px;
+			width: 20px;
+			margin-right: 5px;
+		}
+
+		#logo
+		{
+			height: 80px;
+			width: 135px;
+			margin: 0 auto 30px auto;
+			display: block;
+		}
+
+
+        section
+        {
+        	margin-top: 45px;
+        }
+
+        section h2
+        {
+        	padding-left: 30px;
+        	color: rgb(31,133,222);
+        }
+
+        section p
+        {
+        	text-align: justify;
+        	font-size: 18px;
+        }
+
+        section p img
+        {
+        	height: 180px;
+        	width: 240px;
+        }
+
+        .content
+        {
+        	display: flex;
+        }
+
+        .content p
+        {
+        	max-width: 850px;
+        	margin-right: 90px;
+        	padding-left: 20px
+        }
+
+        .img_sect
+        {
+        	height: 250px;
+        	width: 400px;
+        	margin: auto;
+        	border-radius: 4px;
+        }
+
+        footer
+		{
+			margin-top: 100px;
+			background-color: rgb(73,134,188);
+			color: white;
+			height : 180px;
+			position: relative;
+		}
+
+		footer img
+		{
+			height : 50px;
+			width: 50px;
+		}
+
+		footer a 
+		{
+			text-decoration: none;
+			color: white;
+		}
+
+
+		#reseaux_sociaux p
+		{
+			font-size: 25px;
+			text-align: center;
+			padding-top: 5px;
+		}
+
+		#im_r
+		{
+			position: absolute;
+			top: 39%; 
+			left: 50%; /* à 50%/50% du parent référent */
+		  	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+		}
+
+		#remerciements
+		{
+			position: absolute;
+			color : rgb(250,250,250);
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%);
+			text-align: center;
+		}
+
+		.test
+		{
+			width: 100%;
+			box-shadow: 10px 10px black;
+            border-radius: 25px;
+		}
+
+		@media all and (max-width: 1024px)
+		{
+			
+
+			#menu_deroulant ul
+			{
+				width: 90%;
+			}
+
+			#menu_deroulant ul li
+			{
+				font-size: 10px;
+				height: 22px;
+			}
+
+			#menu_deroulant ul p
+			{
+				font-size: 13px;
+			}
+
+			#contenu ul
+			{
+				display: block;
+				
+			}
+
+			#contenu ul li
+			{
+				font-size: 12px;
+				max-width: 250px;
+				text-align: left;
+				height: 20px;
+			}
+
+			#contenant
+			{
+				margin-bottom: 30px;
+				height: 100px;
+				width: 180px;
+				border: none;
+				flex : 1.5;
+			}
+
+			#contenu
+			{
+				width: 100%;
+				margin-left: 0;
+			}
+
+			.reste_a_afficher
+			{
+				display: none;
+				width: 90px;
+				border : 0.05px rgb(31,133,222) solid;
+				background-color: rgb(250,250,250);
+				height: 35px;
+				border-radius: 5px;
+				font-size: 5px;
+				margin-left: 115px;
+				margin-top: -20px;
+			}
+
+			.reste_a_afficher img
+			{
+				height: 12px;
+				width: 12px;
+			}
+
+			.reste_a_afficher a
+			{
+				font-size: 9px;
+				padding-left: 5px;
+			}
+
+
+			#mini_ecran
+			{
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: flex-start;
+			}
+
+			#div_logo
+			{
+				flex: 1;
+			}
+
+			.content
+			{
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.content p
+			{
+				margin : 0 auto;
+				padding: 0 7px 0 7px;
+			}
+
+			.content img
+			{
+				margin : 10px auto;
+			}
+
+
+			#reseaux_sociaux p, #remerciements p
+			{
+				font-size: 12px;
+			}
+
+			#im_r img
+			{
+				height: 20px;
+				width: 20px;
+			}
+
+			footer
+			{
+				height: 100px;
+			}
+
+		}
+
+	</style>
+</head>
+<body>
+	<div id="mini_ecran">
+		<div id="div_logo">
+			<a href="index.html"><img src="logo.png" id="logo"></a>
+		</div>
+		<div id="contenant">
+			<div id="contenu">
+				<ul id="nav">
+					<li class="li_nav">Animés <img src="Images barre nav/bas_fleche.png">
+						<div class="reste_a_afficher">
+	                        <a href="dbz.html"><img src="Images barre nav/boule_dbz.png" class="img_nav">Dragon Ball Z</a>
+	                        <a href="naruto.html"><img src="Images barre nav/logo_naruto.png" class="img_nav">Naruto</a>
+	                        
+	                    </div>
+					</li>
+					<li class="li_nav">Dessins Animés <img src="Images barre nav/bas_fleche.png">
+						<div class="reste_a_afficher">
+	                        <a href="Rick et Mortu.html"><img src="Images barre nav/rick_logo.png" class="img_nav">Rick & Morty</a>
+	                        <a href="Phineas et Ferb.html"><img src="Images barre nav/ph_f_logo.png" class="img_nav">Phineas & Ferb</a>
+	                        
+	                    </div>
+					</li>
+					<li class="li_nav">Films d'animation <img src="Images barre nav/bas_fleche.png">
+						<div class="reste_a_afficher">
+	                        <a href="la-haut.html"><img src="Images barre nav/property.png" class="img_nav">Là-haut</a> 
+	                        <a href="mulan.html"><img src="Images barre nav/mayan.png" class="img_nav">Mulan</a>
+	                        
+	                    </div>
+					</li>
+					<li class="li_nav"><a href="quizz_good.html">A vous de jouer</a></li>
+
+					
+				</ul>
+				
+			</div>
+			
+		</div>
+	</div>
+
+	<main>
+		<div><img src="images_up/test.jpg" class="test"></div>
+		<section>
+			<h2>I. Préface</h2>
+			<div class="content">
+				<p>Carl Fredricksen, petit garçon, rêve d'être un explorateur depuis qu'il a vu aux actualités du cinéma les exploits de Charles Muntz, célèbre aventurier qui, à bord de son dirigeable et accompagné de ses chiens, a découvert les chutes du Paradis, un espace perdu au Venezuela, mais qui ensuite a ramené un squelette qui a été considéré comme un faux par les scientifiques, ce qui a contraint Charles à aller en Amérique du Sud dans un seul but : prouver qu'il a raison. Jouant dans la rue en imitant son héros, Carl fait la connaissance d'Ellie, une petite fille délurée qui partage le même rêve que lui.</p>
+
+			</div>
+		</section>
+		<section>
+			<h2>II. La vie qui s'écoule</h2>
+			<div class="content">
+				<p>Des années plus tard, Ellie et Carl se marient et rêvent d'aller jusqu'aux chutes du Paradis. Mais les mauvaises nouvelles s'accumulent : le couple ne peut pas avoir d'enfant et les économies pour leur grand voyage sont écornées par les aléas de la vie. Quand Carl peut enfin acheter des billets d'avion pour l'Amérique du Sud, Ellie tombe malade et meurt. Carl reste seul dans sa maison, la dernière debout dans un quartier de style victorien que les engins de chantier rasent pour construire des immeubles modernes. Mais Carl, qui a maintenant 78 ans, refuse de vendre sa demeure et de partir en maison de retraite.</p>
+				<img src="images_up/vieilli.jpg" class="img_sect">
+			</div>
+		</section>
+		<section>
+			<h2>III. La rencontre avec Russell</h2>
+			<div class="content">
+				<p>Un jour, un jeune « explorateur » (similaire à un scout) nommé Russell vient frapper à sa porte et lui demande s'il peut lui rendre service : il veut obtenir son badge d'aide aux personnes âgées. Pour se débarrasser de lui, Carl l'envoie à la recherche d'un oiseau imaginaire nommé le dabou qui viendrait la nuit piétiner ses fleurs. </p>
+
+			</div>
+		</section>
+		<section>
+			<h2>IV. La maison de retraite</h2>
+			<div class="content">
+				<p>Peu de temps après, un des camions du chantier renverse la boîte aux lettres de Carl ; celui-ci panique et, en voulant repousser l'ingénieur qui veut réparer les dégâts, il le frappe à la tête avec sa canne et le blesse. La compagnie saisit l'occasion pour lui intenter un procès et le faire placer en maison de retraite. </p>
+				<img src="images_up/envol.jpg"  class="img_sect">
+			</div>
+		</section>
+		<section>
+			<h2>V. Le grand voyage</h2>
+			<div class="content">
+				<p>Le jour où les employés de la résidence de retraite du Grand Chêne viennent chercher Carl, la maison s'envole grâce à des milliers de ballons attachés par l'intérieur de la cheminée : Carl part accomplir son rêve, aller s'installer aux chutes du Paradis. Mais il découvre que Russell était sur son palier au moment du décollage. Réticent à le faire rentrer, Carl finit par accepter. Après un orage qui a menacé leurs vies, le vieil homme se réveille et commence à faire descendre la maison, mais lorsqu'il touche enfin le sol, il aperçoit les chutes du paradis, de l'autre côté de la falaise où la maison s'est posée. Énervé, il avance avec Russell, qui l'aide à tirer la maison à l'aide de cordes.</p>
+
+			<div class="content">
+		</section>
+		<section>
+			<h2>VI. Les fidèles compagnons</h2>
+			<div class="content">
+				<p>Russell annonce qu'il doit aller au "petit coin". Après avoir fini, alors qu'il mange du chocolat, il se rend compte qu'il lui en manque un bout. Il aperçoit alors un bec bariolé, et en conclut que c'est le petit dabou. Mais il voit alors un animal se dresser devant lui, et revient avec lui. Il pose des questions à Carl sur le dabou et le vieil homme lui répond « oui » tout le temps. Lorsque Russell en conclut que son animal est bel et bien l'oiseau dont parle Carl au début du film, Carl se retourne et voit l'animal géant, que Russell a baptisé Kevin. Incrédule, Carl refuse de le garder, mais l'oiseau et le jeune explorateur sont devenus inséparables. Carl se voit donc contraint de dire oui une fois de plus. Ils avancent encore, et trouvent un chien, Doug, qui parle grâce à un collier. Il se révèle adorable, mais l'oiseau saute sur lui. Seul l'enfant parvient à convaincre le dabou de cesser. Carl tente de se débarrasser du chien et de l'oiseau pour être tranquille, mais il n'y parvient pas, et c'est sur des rochers qu'ils se réunissent tous. Le dabou crie alors et Doug explique qu'elle appelle ses petits. Étonné que Kevin soit une femelle, Russell est triste de devoir laisser le volatile rejoindre ses oisillons. </p>
+				<img src="images_up/compagnons.gif" class="img_sect">
+			</div>
+		</section>
+		<section>
+
+			<h2>VII. Les prisonniers</h2>
+			<div class="content">
+				<p>C'est à ce moment que trois chiens, Alpha, Beta et Gamma, arrivent et demandent à Doug où est son prisonnier, et le canin dit qu'il l'a perdu. Alors que les deux humains tentent de s'échapper en s'opposant à l'idée imposée par les animaux de les accompagner en tant que prisonniers, ils décident de les suivre, voyant la férocité dans les yeux des chiens. Ils arrivent dans une meute de chiens, où ils sont sur le point d'être dévorés. Mais leur maître leur dit de cesser. .</p>
+				<img src="images_up/abg.jpg" class="img_sect">
+			</div>
+		</section>
+		<section>
+			<h2>VIII. La rencontre</h2>
+			<div class="content">
+				<p>La personne s'avère être Charles Muntz. Ce dernier annonce que les deux personnages sont désormais leurs invités. Les deux protagonistes attachent la maison au mur pour entrer dans le dirigeable de l'explorateur. Les chiens préparent le banquet des invités, alors que Doug a reçu la collerette de la honte. Charles Muntz montre à ses invités ses squelettes d'animaux trouvés et mange ensuite avec eux. </p>
+				<img src="images_up/faux.jpg" class="img_sect">
+			</div>
+		</section>
+		<section>
+			<h2>IX. La fuite</h2>
+			<div class="content">
+				<p>Durant le repas, Russell parle involontairement de Kevin, et malgré une tentative de Carl pour éviter le sujet et alors que l'oiseau est repéré par Muntz, ce dernier révèle son vrai visage en parlant de tous les explorateurs qu'il a tué pour ne pas qu'on l'entrave dans sa quête de l'oiseau, unique raison pour laquelle il est resté aux Chutes du Paradis. Fredricksen et l'enfant s'enfuient en courant dans les montagnes pour sauver leurs vies. Ils se débarrassent des chiens grâce à Doug qui a ralenti la meute et Kevin qui les a fait courir plus rapidement. Les chiens reviennent bredouilles, mais l'oiseau est blessé. Carl décide de l'aider à retrouver sa progéniture, mais ils sont localisés par l'ennemi, qui brûle la maison de Carl, le forçant à choisir entre cette dernière et l'oiseau. Carl choisit la première, et Russell n'en revient pas de cet acte. Le feu est éteint, et le lendemain, Russell boude. </p>
+			</div>
+		</section>
+		<section>
+			<h2>X. La mission de sauvetage</h2>
+			<div class="content">
+				<p>Alors que Carl découvre dans le livre d'aventures d'Ellie des photos de mariage, avec à la fin un mot pour l'encourager à passer à autre chose, le jeune garçon s'envole seul avec des ballons pour tenter de sauver Kevin. Il arrive au dirigeable et se fait capturer, et, au moment d'être lâché dans le vide, est sauvé par Carl qui est accompagné de Doug. Il attache la maison à la porte du dirigeable et entre pour sauver l'oiseau géant. Ils entrent par les conduits d'aération et arrivent juste sur la cage où, avec une balle de la canne de Carl, ils distraient les chiens. Ils referment la porte et libèrent l'oiseau et la maison se détache à ce moment de la porte. La corde tombe et Russell s'y accroche. Il essaye de remonter mais Muntz a déjà envoyé des chiens sur des avions pour attaquer la maison. Alors que Carl et les deux bêtes arrivent dans la salle des squelettes animaliers, Charles tente de tuer Carl avec une épée. Doug empêche cela, mais il est envoyé avec les autres chiens de la meute ; Carl doit se battre avec sa canne. Les deux vieux hommes arrêtent après un mal de dos. C'est le moment où Doug se retrouve dans un cul-de-sac. Il recule, mais pendant ce temps Muntz a coincé Fredricksen et s'apprête à le tuer, tentative annulée par un crachat de dentier de la part de ce dernier. Fou, l'antagoniste détruit toute sa collection, dont une autre partie tombera dans les airs lorsque Doug fera tourner accidentellement le dirigeable. Kevin et Carl montent au-dessus du dirigeable et Muntz a une autre idée plutôt que les poursuivre. Russell de son côté s'est débarrassé des avions, et pose la maison sur le dirigeable pour récupérer les trois personnages, dont Doug qui est devenu alpha en mettant la collerette de la honte au précédent alpha, dont le collier est à nouveau cassé. Ils s'apprêtent à entrer, quand leur adversaire revient carabine en main. Il force Carl à retenir la maison et tente d'entrer. Tout à coup, Carl a une idée : il ordonne à l'enfant de saisir les deux bêtes et alors que leur ennemi parvient à entrer, Fredricksen montre du chocolat. Kevin ne résiste pas et saute de la fenêtre tandis que la maison se détache du dirigeable. Charles saute aussi, mais des ballons s'accrochent à ses pieds, qui se détachent et le font tomber dans le vide.</p>
+				<img src="images_up/gu.jpg" class="img_sect">
+			</div>
+		</section>
+
+		<section>
+			<h2>XI. Le dénouement</h2>
+			<div class="content">
+				<p>Carl les remonte, et alors que Russell s'excuse pour sa maison en train de tomber, Carl répond que c'est juste une maison et plus tard, le dabou est relâché près de ses petits. La mère part avec ses petits, et les deux protagonistes prennent le contrôle du dirigeable. Lors de la cérémonie des apprentis explorateurs, le père de Russell n'est pas là, car comme ce dernier l'a dit plus tôt, il n'est jamais là. C'est donc Carl qui vient à sa place et aussi pour que le badge d'assistance à personne âgée ne soit pas donné pour rien. Russell reçoit cependant en plus le badge d'explorateur d'Ellie que le vieil homme avait gardé durant toutes ces années. Le film prend fin alors que les deux héros mangent une glace en jouant à un des jeux favoris de l'enfant. Le dernier plan du film montre les Chutes du Paradis avec la maison qui repose désormais dessus, comme Carl l'avait promis à sa femme.</p>
+				<img src="images_up/pilote.jpg" class="img_sect">
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div id="reseaux_sociaux">
+			<p>Nos réseaux sociaux : </p>
+			<div id = "im_r">
+				<img src="images/fb.png"> <img src="images/twitter.png"> <img src="images/insta.png" id="image_insta">
+			</div>
+			
+		</div>
+		<div id="remerciements">
+			<a href="quisommesnous.html"><p>Qui sommes-nous ?<br> @LAC</p></a>
+		</div>
+	</footer>
+</body>
+</html>

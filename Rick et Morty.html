@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Rick et Morty </title>
+        <meta charset="utf-8" />
+        <style>
+            html
+            {
+                font-family: COMIC SANS MS;
+            }
+
+            #contenant
+            {
+                display: flex;
+                width: 100%;
+                border-top: 0.3px rgb(31,133,222) solid;
+                border-bottom: 0.3px rgb(31,133,222) solid;
+                justify-content: center;
+                height: 50px;
+                margin-bottom: 80px;
+            }
+
+            #contenu
+            {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            ul
+            {
+                width : 850px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
+            }
+
+            li
+            {
+                align-content: stretch;
+                text-align: center;
+                font-size: 17px;
+                flex : 1;
+                list-style: none;
+                margin-right: 0;
+                color : rgb(140,140,140);
+                height: 50px;
+            }
+
+            .li_nav img
+            {
+                height: 10px;
+                width: 10px;
+            }
+
+            li:hover
+            {
+                color : black;
+                cursor: pointer;
+            }
+
+
+            .reste_a_afficher
+            {
+                display: none;
+                width: 65%;
+                border : 0.05px rgb(31,133,222) solid;
+                background-color: rgb(250,250,250);
+                height: 60px;
+                margin-top: 16px;
+                border-radius: 5px;
+
+            }
+
+            .reste_a_afficher a:hover, li a:hover
+            {
+                color:black;
+            }
+
+            li a
+            {
+                text-decoration: none;
+                color:rgb(140,140,140);
+            }
+
+            .reste_a_afficher a
+            {
+                color:rgb(180,180,180);
+                text-decoration: none;
+                margin-top: 3px;
+                font-size: 14px;
+            }
+
+            li:hover .reste_a_afficher
+            {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .img_nav
+            {
+                height : 18px;
+                width: 20px;
+                margin-right: 5px;
+            }
+
+            #logo
+            {
+                height: 80px;
+                width: 135px;
+                margin: 0 auto 30px auto;
+                display: block;
+            }
+
+           
+            .banner
+            {
+                width: 100%;
+                box-shadow: 10px 10px black;
+                border-radius: 25px;
+            }
+
+            #logo_rm
+            {
+                height:100px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+            h2
+            {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            h3, h2
+            {
+                color: rgb(31,133,222);
+            }
+
+            .partie
+            {
+                margin-top: 70px;
+                padding-left:100px;
+            }
+
+            .contenu_rm
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .pcontent
+            {
+                width: 90%;
+                text-align: justify;
+            }
+
+            .imgacc
+            {
+                border-radius: 10%;
+                padding-left:30px;
+                padding-right: 40px; 
+                width: 400px;
+                height: 210px;
+                display: block;
+                margin: auto;
+            }
+            figure
+            {
+                 text-align: center;
+            }
+
+            footer
+            {
+                margin-top: 100px;
+                background-color: rgb(73,134,188);
+                color: white;
+                height : 180px;
+                position: relative;
+            }
+
+            footer a
+            {
+                text-decoration: none;
+                color: white;
+            }
+
+            footer img
+            {
+                height : 50px;
+                width: 50px;
+            }
+
+
+            #reseaux_sociaux p
+            {
+                font-size: 25px;
+                text-align: center;
+                padding-top: 5px;
+            }
+
+            #im_r
+            {
+                position: absolute;
+                top: 39%; 
+                left: 50%; /* à 50%/50% du parent référent */
+                transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+            }
+
+            #remerciements
+            {
+                position: absolute;
+                color : rgb(250,250,250);
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%);
+                text-align: center;
+            }
+
+            .pre_content
+            {
+                text-align: justify;
+                padding: 0 10px 0 10px;
+            }
+
+            @media all and (max-width: 1024px)
+            {
+                
+
+                #menu_deroulant ul
+                {
+                    width: 90%;
+                }
+
+                #menu_deroulant ul li
+                {
+                    font-size: 10px;
+                    height: 22px;
+                }
+
+                #menu_deroulant ul p
+                {
+                    font-size: 13px;
+                }
+
+                #contenu ul
+                {
+                    display: block;
+                    
+                }
+
+                #contenu ul li
+                {
+                    font-size: 12px;
+                    max-width: 250px;
+                    text-align: left;
+                    height: 20px;
+                }
+
+                #contenant
+                {
+                    margin-bottom: 30px;
+                    height: 100px;
+                    width: 180px;
+                    border: none;
+                    flex : 1.5;
+                }
+
+                #contenu
+                {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                .reste_a_afficher
+                {
+                    display: none;
+                    width: 90px;
+                    border : 0.05px rgb(31,133,222) solid;
+                    background-color: rgb(250,250,250);
+                    height: 35px;
+                    border-radius: 5px;
+                    font-size: 5px;
+                    margin-left: 115px;
+                    margin-top: -20px;
+                }
+
+                .reste_a_afficher img
+                {
+                    height: 12px;
+                    width: 12px;
+                }
+
+                .reste_a_afficher a
+                {
+                    font-size: 9px;
+                    padding-left: 5px;
+                }
+
+                .contenu_rm img
+                {
+                    display: block;
+                    margin: 0 auto;
+                    height: 200px;
+                    width: 400px;
+                }
+
+
+                #mini_ecran
+                {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-start;
+                }
+
+                #div_logo
+                {
+                    flex: 1;
+                }
+
+                .partie
+                {
+                    margin-top: 20px;
+                }
+
+                #reseaux_sociaux p, #remerciements p
+                {
+                    font-size: 12px;
+                }
+
+                #im_r img
+                {
+                    height: 20px;
+                    width: 20px;
+                }
+
+                footer
+                {
+                    height: 100px;
+                }
+
+                .contenu_rm
+                {
+                    flex-direction: column;
+
+                }
+
+                .contenu_rm img
+                {
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .pcontent
+                {
+                    height: 180px;
+                    font-size: 12px;
+                    width: 90%;
+                }
+
+                .pre_content
+                {
+                    font-size: 12px;
+                }
+
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="mini_ecran">
+            <div id="div_logo">
+                <a href="index.html"><img src="logo.png" id="logo"></a>
+            </div>
+            <div id="contenant">
+                <div id="contenu">
+                    <ul id="nav">
+                        <li class="li_nav">Animés <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="dbz.html"><img src="Images barre nav/boule_dbz.png" class="img_nav">Dragon Ball Z</a>
+                                <a href="naruto.html"><img src="Images barre nav/logo_naruto.png" class="img_nav">Naruto</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav">Dessins Animés <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="Rick et Mortu.html"><img src="Images barre nav/rick_logo.png" class="img_nav">Rick & Morty</a>
+                                <a href="Phineas et Ferb.html"><img src="Images barre nav/ph_f_logo.png" class="img_nav">Phineas & Ferb</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav">Films d'animation <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="la-haut.html"><img src="Images barre nav/property.png" class="img_nav">Là-haut</a> 
+                                <a href="mulan.html"><img src="Images barre nav/mayan.png" class="img_nav">Mulan</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav"><a href="quizz_good.html">A vous de jouer</a></li>
+
+                        
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <img  id="logo_rm" src="images_RM/logo.png">
+        <div ><img src="images_RM/Principal.jpg" class="banner"></div>
+        <figure>
+            <figcaption><h3>Générique Rick et Morty :<h3></figcaption>
+            <audio controls src="images_RM/generique.mp3">
+            </audio>
+        </figure>
+        <h2>Présentation</h2>
+        <p class="pre_content">
+            Rick et Morty (Rick and Morty) est une série d'animation pour adultes américaine créée par Justin Roiland et Dan Harmon, diffusée depuis le 2 décembre 2013 sur Cartoon Network, dans la tranche fin de soirée Adult Swim. La série suit les mésaventures de Rick Sanchez, un scientifique cynique et fantasque, et de son petit-fils, Morty Smith, perturbé et facilement influençable, qui partagent leur temps entre une vie domestique et des aventures interdimensionnelles. Roiland double les personnages principaux, tandis que Chris Parnell, Spencer Grammer et Sarah Chalke prêtent leur voix au reste de la famille. <br> <br>
+
+            La série provient d'une courte parodie animée reposant sur la trilogie de films Retour vers le futur, titrée The Real Animated Adventures of Doc and Mharti, créée par Roiland pour Channel 101, un festival de court métrage cofondé par Harmon. Lorsque Adult Swim approche Harmon pour des idées d'émissions de télévision, lui et Roiland décident de développer un programme basé sur ce court métrage. <br> <br>
+
+
+            Le programme est très bien reçu par la critique pour son originalité, sa créativité et son humour.
+            En 2018 lui est decerné le Creative Arts Emmy Awards : meilleur programme animé pour l'épisode Rick-ornichon de la saison 3.
+        </p>
+
+        <h2>L'histoire de Rick et Morty </h2>
+            <p class="pre_content">
+            Rick Sanchez est un vieux scientifique alcoolique au caractère imprévisible et exubérant qui passe son temps à entraîner son petit-fils Morty dans des aventures folles et dangereuses se déroulant dans des mondes parallèles. Cela lui occasionne un certain nombre de problèmes familiaux, les parents de Morty désapprouvant la mauvaise influence de Rick sur son petit fils. Il faut dire que ce dernier est assez naïf (voire un peu benêt) et qu'il est particulièrement peureux. Imaginez donc sa réaction lorsqu'il se retrouve face à des monstres terrifiants lors des expéditions qu'il fait avec son grand-père !
+            </p>
+
+        <h2>Les personnages clefs</h2>
+
+            <div class= "partie">
+                <h3>Rick Sanchez</h3>
+                <div class="contenu_rm">
+                    <p class = "pcontent">
+                        Véritable génie scientifique alcoolique, vulgaire, cynique et misanthrope. Il est l'incarnation de la science irresponsable ; d'une très grande intelligence et pouvant réaliser n'importe quelle invention, il peut être parfois un criminel ne répugnant à rien et outrepassant toute morale.</br>
+                        Rick est souvent source d'inquiétude pour Beth, sa fille, quand il passe beaucoup de temps avec Morty, qu'il emploie dangereusement et tente souvent d'impressionner. Bien qu'il semble ne pas avoir de sentiments humains ou de morale, il lui arrive parfois d'avoir des moments de tendresse, notamment avec Morty, qu'il aime malgré tout sans pour autant l'avouer. </br>
+                    </p>
+                    <img class = "imgacc" src="images_RM/Rick.jpg">
+                </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Morty Smith</h3>
+            <div class="contenu_rm">
+            <p class = "pcontent">
+
+             C'est le petit-fils de Rick de 14 ans. Plein de bonnes intentions, timide et soucieux de faire le bien, il est trop souvent emporté dans les aventures de Rick. Adolescent constamment ridiculisé par Rick, il l'aime pourtant énormément malgré l'antipathie que ce dernier peut avoir à son égard. Si Morty voue une grande admiration à son grand-père de par les mondes qu'il lui fait découvrir, cherchant souvent à lui faire plaisir et à créer des liens avec lui, il lui arrive d'avoir les nerfs qui lâchent et de ne plus être capable de le supporter. Bien qu'il soit perçu comme un adolescent peu intelligent au début de la série, Morty se révèle souvent très vif d'esprit et est d'une grande aide pour Rick.</br>
+            
+            </p>
+            <img class = "imgacc"  src="images_RM/Morty.jpg" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Beth Smith</h3>
+            <div class="contenu_rm">
+            <p class = "pcontent">
+
+            Fille de Rick, mère de Morty et épouse de Jerry. Elle est chirurgienne cardiaque pour chevaux et, à l'instar de son père, elle aime l'alcool (notamment le vin rouge). En dépit d'un caractère autoritaire, elle remet régulièrement en question ses choix de vie et sa façon d'élever ses deux enfants, pour qui elle ne montre pourtant pas réellement d'attention. Bien qu'elle semble la plus réfléchie de la famille Smith, il lui arrive souvent d'avoir un comportement irresponsable, notamment lors de la saison 3. </br> 
+            Les détails du passé de Beth ne sont pas vraiment connus. Elle s'est décrit comme une jeune fille enthousiaste de Muskegon, Michigan, élevée par une mère très ordinaire après que son père les a abandonnées à une période inconnue pour des raisons inconnues. Au lycée, elle rêvait d'être chirurgien cardiaque, mais à 17 ans, elle est allée au bal de promo du lycée avec Jerry Smith et est tombée enceinte de Summer. Malgré cela, Beth a étudié à l'université pour réaliser son rêve. Beth a admis qu'elle avait pensé à avorter de Summer.
+            </p>
+            <img class = "imgacc" src="images_RM/Beth.jpg" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Jerry Smith</h3>
+            <div class="contenu_rm">
+            <p class = "pcontent">
+
+             Jerry est l'époux de Beth Smith , le père de Summer Smith et Morty Smith, et le gendre de Rick Sanchez. La première moitié de la saison 1 comprenait principalement Jerry C-137, tandis que l'actuel Jerry est né et habite la dimension de remplacement. Le mariage de Jerry avec Beth est souvent difficile, et il a passé la majeure partie de la saison 3 à vivre dans un appartement séparé en tant que célibataire jusqu'à ce que lui et Beth se réconcilient. Jerry est peureux et considéré comme un idiot par sa famille il est peu sûr de lui et a une relation contradictoire avec son beau-père, Rick. Il rivalise souvent avec Rick pour l'admiration de  sa famille et il désapprouve fortement l'influence que ce dernier a sur son fils. On lui reproche très souvent le fait qu'il soit chômeur. 
+            </p>
+            <img  class = "imgacc" src="images_RM/Jerry2.jpg" >
+            </div>
+            </div>
+            
+            <div class= "partie">
+            <h3>Summer Smith</h3>
+            <div class="contenu_rm">
+            <p class = "pcontent">
+
+            La sœur de Morty, superficielle et obsédée par son image auprès de ses camarades. Summer est la lycéenne américaine typique. Elle voudrait être populaire et considère que sa famille est dysfonctionnelle. Elle est toujours absorbée par son téléphone et les réseaux sociaux, à filmer son chien quand il devient super-intelligent, et tremble à l'idée que son père se crée un compte Facebook.</br>
+            Elle aime se servir des inventions de son grand père pour favoriser sa vie sociale.
+            Rick la considère comme une compagne alternative d'aventures, mais son sexisme l'empêche de la reconnaître totalement comme elle le voudrait.
+            </p>
+            <img class = "imgacc" src="images_RM/Summer.jpg" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Les amis de Rick</h3>
+            <div class="contenu_rm">
+            <p class = "pcontent">
+
+            Condorman : C'est un ami de longue date de Rick. Mi-homme mi-oiseau, il vit sur la planète Squanch, à 6 000 années-lumière de la Terre. Lors de son mariage avec Tammy (une amie de Summer), on découvre que cette dernière est un agent fédéral chargée de traquer Condorman, Rick et tous leurs amis criminels. Elle lui tire plusieurs fois dessus lors de la fusillade qui suit. Il est finalement ressuscité par le gouvernement galactique sous forme de cyborg : Phénixman</br>
+            Squanchy : Un des meilleurs amis de Rick. C'est un chat jaune et anthropomorphe ayant la capacité de devenir des centaines de fois plus fort en cas de besoin. Sa passion est la masturbation par asphyxie érotique ; il utilise souvent le terme "Squanch" pour tout et n'importe quoi, à la manière des Schtroumpfs.</br>
+            </p>
+            <img class = "imgacc" src="images_RM/AmisR.jpg" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Les personnages autour de Morty</h3>
+            <div class="contenu_rm">
+            <p class = "pcontent">
+
+            <strong>Jessica </strong>: est une camarade de classe dont Morty est amoureux.</br> <br>
+            <strong>Mr Goldenfold</strong> : Professeur de mathématiques farfelu de Morty. Il a une multitude de pulsions sexuelles refoulées depuis que sa femme l'a quitté.</br> <br>
+            Gene Vagin : Directeur de l'école de Morty. Il affirme pour sa défense que son nom à consonance ridicule est d'origine scandinave.</br> <br>
+            Evil Morty : Ce Morty d'une réalité parallèle se ramène à beaucoup de suppositions auprès de lui, on comprend par la suite qu'il veut se venger de Rick.<br> <br>
+            Terry Effrayant : Une parodie de Freddy Krueger. C'est un personnage de rêve qui finit par aider Rick et Morty en se levant pour Morty contre son tyran enseignant. 
+            </p>
+            <img class = "imgacc" src="images_RM/Evil.jpg" >
+            </div>
+            </div>
+
+            <footer>
+                <div id="reseaux_sociaux">
+                    <p>Nos réseaux sociaux : </p>
+                    <div id = "im_r">
+                        <img src="images/fb.png"> <img src="images/twitter.png"> <img src="images/insta.png" id="image_insta">
+                    </div>
+                    
+                </div>
+                <div id="remerciements">
+                    <a href="quisommesnous.html"><p>Qui sommes-nous ?<br> @LAC</p></a>
+                </div>
+            </footer>
+
+
+
+    </body>
+
+</html>

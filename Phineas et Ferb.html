@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Phineas et Ferb </title>
+        <meta charset="utf-8" />
+        <style>
+            html
+            {
+                font-family: COMIC SANS MS;
+            }
+            #contenant
+            {
+                display: flex;
+                width: 100%;
+                border-top: 0.3px rgb(31,133,222) solid;
+                border-bottom: 0.3px rgb(31,133,222) solid;
+                justify-content: center;
+                height: 50px;
+                margin-bottom: 60px;
+            }
+
+            #contenu
+            {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            ul
+            {
+                width : 850px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
+            }
+
+            li
+            {
+                align-content: stretch;
+                text-align: center;
+                font-size: 17px;
+                flex : 1;
+                list-style: none;
+                margin-right: 0;
+                color : rgb(140,140,140);
+                height: 50px;
+            }
+
+            .li_nav img
+            {
+                height: 10px;
+                width: 10px;
+            }
+
+            li:hover
+            {
+                color : black;
+                cursor: pointer;
+            }
+
+
+            .reste_a_afficher
+            {
+                display: none;
+                width: 65%;
+                border : 0.05px rgb(31,133,222) solid;
+                background-color: rgb(250,250,250);
+                height: 60px;
+                margin-top: 16px;
+                border-radius: 5px;
+
+            }
+
+            .reste_a_afficher a:hover, li a:hover
+            {
+                color:black;
+            }
+
+            li a
+            {
+                text-decoration: none;
+                color:rgb(140,140,140);
+            }
+
+            .reste_a_afficher a
+            {
+                color:rgb(180,180,180);
+                text-decoration: none;
+                margin-top: 3px;
+                font-size: 14px;
+            }
+
+            li:hover .reste_a_afficher
+            {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .img_nav
+            {
+                height : 18px;
+                width: 20px;
+                margin-right: 5px;
+            }
+
+            #logo
+            {
+                height: 80px;
+                width: 135px;
+                margin: 0 auto 30px auto;
+                display: block;
+            }
+            .banner
+            {
+                width: 100%;                
+                box-shadow: 10px 10px black;
+                border-radius: 25px;
+                height: 650px;
+            }
+            #logo_pf
+            {
+                height:100px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+            h2
+            {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            h3, h2
+            {
+                color: rgb(31,133,222);
+            }
+            .partie
+            {
+                margin-top: 70px;
+                padding-left:100px;
+            }
+            .contenu_pf
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+            .pcontent
+            {
+                width: 90%;
+                text-align: justify;
+            }
+
+            .pre_content
+            {
+                text-align: justify;
+                padding: 0 10px 0 10px;
+            }
+
+            .imgacc
+            {
+                border-radius: 10%;
+                padding-left:30px;
+                padding-right: 40px;
+                width: 360px;
+                height: 200px;
+            }
+
+
+            figure
+            {
+                 text-align: center;
+            }
+
+            footer
+            {
+                margin-top: 100px;
+                background-color: rgb(73,134,188);
+                color: white;
+                height : 180px;
+                position: relative;
+            }
+
+            footer img
+            {
+                height : 50px;
+                width: 50px;
+            }
+
+
+            #reseaux_sociaux p
+            {
+                font-size: 25px;
+                text-align: center;
+                padding-top: 5px;
+            }
+
+            #im_r
+            {
+                position: absolute;
+                top: 39%; 
+                left: 50%; /* à 50%/50% du parent référent */
+                transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+            }
+
+            #remerciements
+            {
+                position: absolute;
+                color : rgb(250,250,250);
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%);
+                text-align: center;
+            }
+
+            footer a
+            {
+                text-decoration: none;
+                color: white;
+            }
+
+            @media all and (max-width: 1024px)
+            {
+                #menu_deroulant ul
+                {
+                    width: 90%;
+                }
+
+                #menu_deroulant ul li
+                {
+                    font-size: 10px;
+                    height: 22px;
+                }
+
+                #menu_deroulant ul p
+                {
+                    font-size: 13px;
+                }
+
+                #contenu ul
+                {
+                    display: block;
+                    
+                }
+
+                #contenu ul li
+                {
+                    font-size: 12px;
+                    max-width: 250px;
+                    text-align: left;
+                    height: 20px;
+                }
+
+                #contenant
+                {
+                    margin-bottom: 30px;
+                    height: 100px;
+                    width: 180px;
+                    border: none;
+                    flex : 1.5;
+                }
+
+                #contenu
+                {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                .reste_a_afficher
+                {
+                    display: none;
+                    width: 90px;
+                    border : 0.05px rgb(31,133,222) solid;
+                    background-color: rgb(250,250,250);
+                    height: 35px;
+                    border-radius: 5px;
+                    font-size: 5px;
+                    margin-left: 115px;
+                    margin-top: -20px;
+                }
+
+                .reste_a_afficher img
+                {
+                    height: 12px;
+                    width: 12px;
+                }
+
+                .reste_a_afficher a
+                {
+                    font-size: 9px;
+                    padding-left: 5px;
+                }
+
+
+                #mini_ecran
+                {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-start;
+                }
+
+                #div_logo
+                {
+                    flex: 1;
+                }
+
+                .partie
+                {
+                    margin-top: 20px;
+                }
+
+                #reseaux_sociaux p, #remerciements p
+                {
+                    font-size: 12px;
+                }
+
+                #im_r img
+                {
+                    height: 20px;
+                    width: 20px;
+                }
+
+                footer
+                {
+                    height: 100px;
+                }
+
+                .contenu_pf
+                {
+                    flex-direction: column;
+
+                }
+
+                .contenu_pf img
+                {
+                    display: block;
+                    margin: 0 auto;
+                    height: 200px;
+                    width: 400px;
+                }
+
+                .pcontent
+                {
+                    
+                    font-size: 12px;
+                    
+                }
+
+                .pre_content
+                {
+                    font-size: 12px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="mini_ecran">
+            <div id="div_logo">
+                <a href="index.html"><img src="logo.png" id="logo"></a>
+            </div>
+            <div id="contenant">
+                <div id="contenu">
+                    <ul id="nav">
+                        <li class="li_nav">Animés <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="dbz.html"><img src="Images barre nav/boule_dbz.png" class="img_nav">Dragon Ball Z</a>
+                                <a href="naruto.html"><img src="Images barre nav/logo_naruto.png" class="img_nav">Naruto</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav">Dessins Animés <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="Rick et Morty.html"><img src="Images barre nav/rick_logo.png" class="img_nav">Rick & Morty</a>
+                                <a href="Phineas et Ferb.html"><img src="Images barre nav/ph_f_logo.png" class="img_nav">Phineas & Ferb</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav">Films d'animation <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="la-haut.html"><img src="Images barre nav/property.png" class="img_nav">Là-haut</a> 
+                                <a href="mulan.html"><img src="Images barre nav/mayan.png" class="img_nav">Mulan</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav"><a href="quizz_good.html">A vous de jouer</a></li>
+
+                        
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <img  id="logo_pf" src="images_PF/logo.png">
+        <div ><img src="images_PF/principal.jpg" class="banner"></div>
+        <figure>
+            <figcaption><h3>Générique Phinéas et Ferb :<h3></figcaption>
+            <audio controls src="images_PF/generique.mp3">
+            </audio>
+        </figure>
+        <h2>Présentation</h2>
+            <p class="pre_content">
+            Phinéas et Ferb (Phineas and Ferb) est une série télévisée d'animation américaine en 4 saisons de 129 épisodes (répartis en 224 segments) créée par Dan Povenmire et Jeff « Swampy » Marsh et diffusée du 17 août 2007 au 12 juin 2015 sur Disney Channel.<br>
+
+            </p>
+
+        <h2>L'histoire de Phineas et Ferb</h2>
+            <p class="pre_content">
+            La série suit les aventures de deux demi-frères nommés Phinéas Flynn et Ferb Fletcher, qui vivent dans la ville fictive de Danville(secteur des 3 États) et veulent occuper leurs vacances d'été. Leur sœur, Candice, est obnubilée par leurs inventions : elle appelle régulièrement leur mère pour lui montrer les activités des garçons, mais elle n’y arrive jamais.<br>
+
+            Par ailleurs, Phinéas et Ferb ont un ornithorynque, nommé Perry, qui est agent secret. Celui-ci se bat contre le professeur Heinz Doofenshmirtz, qui l'accueille en l'emprisonnant dans un piège puis lui explique son plan maléfique. En effet, ce dernier crée aussi des inventions (dont le nom finit toujours par « -inator »), dans le but de prendre le contrôle du secteur des Trois États.<br>
+            À la fin de chaque épisode, Candice essaye de montrer la construction des garçons à sa mère avec le rituel : Maman ! Phinéas et Ferb ont construit… mais les deux parties de l'histoire entrent en interaction et l'invention des enfants finit souvent involontairement cachée, déplacée ou détruite par l'affrontement entre Perry et Doofenshmirtz. Perry rentre ensuite à la maison, souvent par parapente quand Doofenshmirtz crie : Sois maudit, Perry l'ornithorynque ! avec un fort accent germanique à la suite de quoi Phineas (en général) s'exclame : " Ah ben te v'la Perry ".
+            </p>
+
+        <h2>Les personnages clefs</h2>
+
+            <div class= "partie">
+            <h3>Phinéas Flynn</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            Phinéas Flynn est le demi-frère de Ferb. C'est le porte-parole du duo et celui qui trouve toutes les idées de construction (Il déclare lors de presque tous les épisodes : Ferb ! Je sais ce qu'on va faire aujourd'hui !, suivi souvent de Au fait, il est où Perry ?). Il a une dizaine d'années, et a les cheveux roux comme sa sœur biologique Candice Flynn.<br>
+
+            Il sait jouer de la guitare et du tambourin, manipuler une console de mixage de son, et chante très bien. Comme Ferb, il sait un peu tout faire. Il a l'air d'être amoureux d'Isabella mais personne n'en est très sûr. Phinéas est gaucher comme le montre l'épisode Le clip'orama.<br>
+            <p>
+            <img class = "imgacc" src="images_PF/Phineas.png">
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Ferb Fletcher</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            Ferb Fletcher est le demi-frère de Phinéas, qu'il assiste dans tous ces projets. Il a 9 ans au début de la série. Il a les cheveux verts, sa couleur favorite.<br>
+
+            Il a presque toujours la même expression neutre sur son visage : ses rares changements d’expression sont froncer les sourcils lorsqu’il est très concentré, esquisser un petit sourire lorsqu'il est content ou qu'il veut séduire. Il est extrêmement cultivé et a une très belle voix d'adolescent.<br>
+
+            Son moyen de transport favori est un vélo dont les poignées sont repliées vers l'intérieur. Il se promène toujours avec toutes sortes de plans qu'il peut plier à la perfection (comme le gigantesque plan de navire corsaire qu'il fait tenir dans sa poche, dans l'épisode 24 saison 1 La malédiction de vieille barbe et la carte du monde dans l'épisode Le Tour du monde en 1 jour). Il adore les sandwichs et a souvent des réactions bestiales pour s’en procurer.<br>
+            </p>
+            <img class = "imgacc"  src="images_PF/Ferb.png" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Perry l'ornithorynque</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            Perry est l'animal de compagnie des deux frères. Bien qu'étant un ornithorynque ordinaire, Perry est un des agents secrets de l'organisation de tout-animal appelée O.S.A.S. (Organisation Sans Acronyme Sympa), sous le nom d'Agent P (il porte alors un chapeau) en raison du nom de son espèce en anglais, Platypus. On voit d'ailleurs que l'agent W est un ver (worm) et l'agent C une vache (cow). Perry est chargé d'arrêter le savant « maléfique » Heinz Doofenshmirtz. Planty la plante verte le remplace dans de rares épisodes pour tenir compagnie à Doofenshmirtz en son absence. Le Major Monogram et son assistant Carl sont ses supérieurs hiérarchiques.<br>
+
+            Dès que Phinéas (ou parfois un autre personnage) demande « Au fait, il est où Perry ? », il est vu dans son quartier général. Perry revient généralement à la fin de l'épisode, et l'un des personnages (souvent Phinéas) dit alors : « Ah, bah te v'là Perry ! ».<br>
+
+            Perry ne parle pas et il est de couleur bleu-vert : il émet un léger grognement en grrrr. Il possède son propre thème musical, inspiré de celui de James Bond ou des films d'espionnage et à la fin de quelques missions, son jingle : « l'agent P ! ».
+            </p>
+            <img class = "imgacc" src="images_PF/Perryy.png" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Heinz Doofenshmirtz</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            Il se fait appeler docteur, mais il s'agit d'un faux diplôme (cf. épisode 35, saison 2 À la recherche de Mary la Gaffe). Cependant, il arrive que Doofenshmirtz se fasse appeler professeur, notamment dans Phinéas et Ferb, le film. Doofenshmirtz habite en haut d'un immeuble à l'inscription « Doofenshmirtz Evil Inc. », dont chaque apparition est accompagnée d'un jingle (en français : « Doofenshmirtz Maléfique Anonyme ! »).<br>
+
+            Sa méchanceté est due à une enfance difficile — régulièrement illustrée par divers flashbacks — et à une forte jalousie envers son frère, Roger Doofenshmirtz, maire de Danville et fils préféré (cf. épisode 23, saison 1 Tout le monde aime Roger). Malgré ses plans loufoques (notamment pour conquérir le secteur des Trois États), Heinz Doofenshmirtz doit être surveillé car il pourrait devenir un dangereux dictateur (cf. épisode 28, saison 2 Un futur cauchemardesque ainsi que dans le film Phinéas et Ferb, le film). Il parle avec un fort accent germanique.<br>
+
+            Il est divorcé et sa fille, Vanessa, tente de prouver à sa mère que Doofenshmirtz est un savant maléfique (de la même façon que Candice essaie de démasquer ses frères en montrant à sa mère leurs inventions). Il vit essentiellement de la pension que lui verse son ex-femme Charlène.
+            </p>
+            <img  class = "imgacc" src="images_PF/Heinz.jpg" >
+            </div>
+            </div>
+            
+            <div class= "partie">
+            <h3>Candice Gertrude Flynn</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            Candice Flynn est la grande sœur de Phineas et la demi-sœur de Ferb. On suppose qu'elle a 15 ans durant la saison 1, mais son âge n'est pas clairement précisé. Dans l'épisode "La Comète de Kermilian" (une comète qui passe tous les 73 ans et demi dans la série), Candice dit que la prochaine fois que la comète passera elle aura 88 ans et demi (88,5 - 73,5 = 15), donc on peut supposer que Candice a 15 ans.<br> Candice est amoureuse de Jérémy Johnson, mais sa jeune sœur, Suzie Johnson l'embête toujours quand elle est en présence de Jérémy.<br> Candice montre un grand attachement au dessin animé « Ducky Momo » bien qu’elle ait peur que d’autres personnes le découvrent comme on peut le voir dans l’épisode 33 de la saison 2 « Les effets spéciaux ».
+
+            À chaque épisode, elle essaie de montrer à sa mère ce que Phinéas et Ferb construisent.
+            </p>
+            <img class = "imgacc" src="images_PF/Candice2.jpg" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Linda Flynn et Lawrence Fletcher</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            Lynda Flynn est femme au foyer et Lawrence Fletcher est archéologue, ils sont mariés. Lynda Flynn est la mère de Candice et Phinéas. Lawrence Fletcher est le père de Ferb.<br>
+
+            Lynda Flynn : pense que sa fille Candice est un peu folle et compte écrire un livre citant tout ce qu'elle lui dit des aventures de Phinéas et Ferb, qu'elle voit comme le fruit de l'imagination débordante de sa fille.C'est une ancienne chanteuse en playback des années 1980 sous le pseudonyme de Lindana, elle quitte la scène après une « crise de star ». Il n'y a que deux épisodes où Linda voit ce que Phineas et Ferb ont construit.<br>
+
+            Lawrence Fletcher : est un homme étourdi, non seulement il n'a aucune connaissance du monde qui l'entoure, mais démontre aussi dans plusieurs épisodes une ignorance saisissante dans n'importe quel domaine qui ne soit pas l'archéologie. Il a plusieurs fois vu les inventions de ses enfants et les a même déjà surpris en train de les construire mais n'y a jamais prêté grande importance.
+            </p>
+            <img class = "imgacc" src="images_PF/LetL.jpg" >
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Les amis de Phineas et Ferb</h3>
+            <div class="contenu_pf">
+            <p class = "pcontent">
+
+            <strong>Isabella Garcia-Shapiro</strong> : voisine de Phinéas et Ferb. Elle fait partie des « Filles du coin du feu », une association scoute. Isabella est très amoureuse de Phinéas, mais lui ne s'en rend pas compte.<br>
+            <strong>Buford Van Storm </strong>: Gros et un peu méchant, il embête souvent Baljeet. Il a aussi un poisson rouge, qui se nomme Biff, dont il ne peut se séparer.<br>
+            <strong>Baljeet Tjinder </strong>: Il est indien et très bon élève (sa pire note est un A-). Il a un emploi du temps très chargé dans lequel chaque seconde compte.  Il peut jouer de plusieurs instruments.<br>
+            <strong>Jérémy Johnson </strong>: est un garçon calme et un peu naïf. Il fait partie d'un groupe pop-rock, Jeremy and the Incidentals. Il devient officiellement le petit-ami de Candice. <br>
+           
+            <strong>Stacy Hirano</strong> : Jeune adolescente d’origine japonaise, Stacy est la meilleure amie de Candice. Elle ne semble pas particulièrement intéressée par le fait de « démasquer » Phinéas et Ferb et préfère essayer d'en détourner Candice pour faire du shopping. Elle participe même parfois à leurs aventures.<br>
+            </p>
+            <img class = "imgacc" src="images_PF/Amis.jpg" >
+            </div>
+            </div>
+
+        <footer>
+            <div id="reseaux_sociaux">
+                <p>Nos réseaux sociaux : </p>
+                <div id = "im_r">
+                    <img src="images/fb.png"> <img src="images/twitter.png"> <img src="images/insta.png" id="image_insta">
+                </div>
+                
+            </div>
+            <div id="remerciements">
+                <a href="quisommesnous.html"><p>Qui sommes-nous ?<br> @LAC</p></a>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

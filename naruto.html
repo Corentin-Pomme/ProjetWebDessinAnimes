@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Naruto  </title>
+        <meta charset="utf-8" />
+        <style>
+            html
+            {
+                font-family: COMIC SANS MS;
+            }
+
+            #contenant
+            {
+                display: flex;
+                width: 100%;
+                border-top: 0.3px rgb(31,133,222) solid;
+                border-bottom: 0.3px rgb(31,133,222) solid;
+                justify-content: center;
+                height: 50px;
+                margin-bottom: 80px;
+            }
+
+            #contenu
+            {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            ul
+            {
+                width : 850px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
+            }
+
+            li
+            {
+                align-content: stretch;
+                text-align: center;
+                font-size: 17px;
+                flex : 1;
+                list-style: none;
+                margin-right: 0;
+                color : rgb(140,140,140);
+                height: 50px;
+            }
+
+            .li_nav img
+            {
+                height: 10px;
+                width: 10px;
+            }
+
+            li:hover
+            {
+                color : black;
+                cursor: pointer;
+            }
+
+
+            .reste_a_afficher
+            {
+                display: none;
+                width: 65%;
+                border : 0.05px rgb(31,133,222) solid;
+                background-color: rgb(250,250,250);
+                height: 60px;
+                margin-top: 16px;
+                border-radius: 5px;
+
+            }
+
+            .reste_a_afficher a:hover, li a:hover
+            {
+                color:black;
+            }
+
+            li a
+            {
+                text-decoration: none;
+                color:rgb(140,140,140);
+            }
+
+            .reste_a_afficher a
+            {
+                color:rgb(180,180,180);
+                text-decoration: none;
+                margin-top: 3px;
+                font-size: 14px;
+            }
+
+            li:hover .reste_a_afficher
+            {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .img_nav
+            {
+                height : 18px;
+                width: 20px;
+                margin-right: 5px;
+            }
+
+            #logo
+            {
+                height: 80px;
+                width: 135px;
+                margin: 0 auto 30px auto;
+                display: block;
+            }
+
+            .banner
+            {
+                width: 100%;
+                box-shadow: 10px 10px black;
+                border-radius: 25px;
+            }
+                        
+           
+            .tout
+            {
+                /*background-color: #E6E3D3;*/
+                margin-top: 100px;
+                margin-left: 100px;
+                height:300px;
+                width:1200px;
+                display:flex;
+                
+                border:1px solid black;
+                box-sizing: border-box;
+                align-content: space-around;
+            }
+
+            form
+            {   padding-left: 70px;
+                height:160px;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .partie
+            {
+                margin-top: 70px;
+                padding-left:100px;
+                
+
+            }
+            .contenu_nar
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+            figure
+            {
+                text-align: center;
+            }
+            audio
+            {
+                margin-top: 10px;
+            }
+
+            h2, h3
+            {
+                color: rgb(31,133,222);
+            }
+
+            footer
+            {
+                margin-top: 100px;
+                background-color: rgb(73,134,188);
+                color: white;
+                height : 180px;
+                position: relative;
+            }
+
+            footer img
+            {
+                height : 50px;
+                width: 50px;
+            }
+
+
+            #reseaux_sociaux p
+            {
+                font-size: 25px;
+                text-align: center;
+                padding-top: 5px;
+            }
+
+            #im_r
+            {
+                position: absolute;
+                top: 39%; 
+                left: 50%; /* à 50%/50% du parent référent */
+                transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+            }
+
+            #remerciements
+            {
+                position: absolute;
+                color : rgb(250,250,250);
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%);
+                text-align: center;
+            }
+
+            .pcontent
+            {
+                
+                width: 800px;
+                text-align: justify;
+            }
+
+            .pre_content
+            {
+                text-align: justify;
+                padding: 0 10px 0 10px;
+            }
+
+            .imgacc
+            {
+                border-radius: 10%;
+                padding-left:30px;
+                padding-right: 40px; 
+                width: 360px;
+                margin:auto;
+            }
+
+            footer a
+            {
+                text-decoration: none;
+                color: white;
+            }
+
+            @media all and (max-width: 1024px)
+            {
+                #menu_deroulant ul
+                {
+                    width: 90%;
+                }
+
+                #menu_deroulant ul li
+                {
+                    font-size: 10px;
+                    height: 22px;
+                }
+
+                #menu_deroulant ul p
+                {
+                    font-size: 13px;
+                }
+
+                #contenu ul
+                {
+                    display: block;
+                    
+                }
+
+                #contenu ul li
+                {
+                    font-size: 12px;
+                    max-width: 250px;
+                    text-align: left;
+                    height: 20px;
+                }
+
+                #contenant
+                {
+                    margin-bottom: 30px;
+                    height: 100px;
+                    width: 180px;
+                    border: none;
+                    flex : 1.5;
+                }
+
+                #contenu
+                {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                .reste_a_afficher
+                {
+                    display: none;
+                    width: 90px;
+                    border : 0.05px rgb(31,133,222) solid;
+                    background-color: rgb(250,250,250);
+                    height: 35px;
+                    border-radius: 5px;
+                    font-size: 5px;
+                    margin-left: 115px;
+                    margin-top: -20px;
+                }
+
+                .reste_a_afficher img
+                {
+                    height: 12px;
+                    width: 12px;
+                }
+
+                .reste_a_afficher a
+                {
+                    font-size: 9px;
+                    padding-left: 5px;
+                }
+
+
+                #mini_ecran
+                {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-start;
+                }
+
+                #div_logo
+                {
+                    flex: 1;
+                }
+
+                .partie
+                {
+                    margin-top: 20px;
+                }
+
+                #reseaux_sociaux p, #remerciements p
+                {
+                    font-size: 12px;
+                }
+
+                #im_r img
+                {
+                    height: 20px;
+                    width: 20px;
+                }
+
+                footer
+                {
+                    height: 100px;
+                }
+
+                .contenu_nar
+                {
+                    flex-direction: column;
+
+                }
+
+                .contenu_nar img
+                {
+                    display: block;
+                    margin: 0 auto;
+                    height: 200px;
+                    width: 400px;
+                }
+
+                .pcontent
+                {
+                    font-size: 12px;
+                    width: 90%;
+                }
+
+                .pre_content
+                {
+                    font-size: 12px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="mini_ecran">
+            <div id="div_logo">
+                <a href="index.html"><img src="logo.png" id="logo"></a>
+            </div>
+            <div id="contenant">
+                <div id="contenu">
+                    <ul id="nav">
+                        <li class="li_nav">Animés <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="dbz.html"><img src="Images barre nav/boule_dbz.png" class="img_nav">Dragon Ball Z</a>
+                                <a href="naruto.html"><img src="Images barre nav/logo_naruto.png" class="img_nav">Naruto</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav">Dessins Animés <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="Rick et Morty.html"><img src="Images barre nav/rick_logo.png" class="img_nav">Rick & Morty</a>
+                                <a href="Phineas et Ferb.html"><img src="Images barre nav/ph_f_logo.png" class="img_nav">Phineas & Ferb</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav">Films d'animation <img src="Images barre nav/bas_fleche.png">
+                            <div class="reste_a_afficher">
+                                <a href="la-haut.html"><img src="Images barre nav/property.png" class="img_nav">Là-haut</a> 
+                                <a href="mulan.html"><img src="Images barre nav/mayan.png" class="img_nav">Mulan</a>
+                                
+                            </div>
+                        </li>
+                        <li class="li_nav"><a href="quizz_good.html">A vous de jouer</a></li>
+
+                        
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <div ><img src="images_naruto/Naruto.jpg" class="banner"></div>
+        <figure>
+                <figcaption>Générique Naruto:</figcaption>
+                <audio controls src="images_naruto/Naruto.mp3">
+                </audio>
+        </figure>
+        <h2>Présentation</h2>
+            <p class="pre_content">
+             Naruto Uzumaki (うずまき ナルト, Uzumaki Naruto) est un personnage de fiction, principal protagoniste du manga Naruto inventé par Masashi Kishimoto.
+
+            Dans l'univers de la série, Naruto est un jeune ninja du village de Konoha membre du clan Uzumaki. D'après Kushina Uzumaki, le clan Senju et le clan Uzumaki ont un lointain lien de sang.Hôte du démon renard à neuf queues nommé Kurama ou Kyûbi, une créature qui a attaqué le village par le passé, il est rejeté par les autres villageois. Son ambition est de devenir Hokage, le chef du village,le plus fort de Konoha, afin de gagner le respect des habitants. <br>
+
+            De caractère joyeux et déterminé, il parvient au fil de la série à se lier d'amitié avec plusieurs ninjas du village et tout particulièrement avec Sasuke Uchiwa, qu'il considère comme son frère et rival. Au fur et à mesure de sa progression dans la série, il parvient à se faire accepter par les habitants du village, jusqu’à devenir un héros pour eux après les avoir protégés. Il s'est rapidement avéré être l'un des principaux acteurs ayant remporté la quatrième grande guerre Shinobi, le conduisant à réaliser son rêve et à devenir le septième Hokage du village Konoha. <br>
+            </p>
+        <h2>L'histoire de Naruto </h2>
+            <p class="pre_content">
+            Au village caché de Konoha, les enfants sont entraînés, dès leur plus jeune âge, afin de devenir des ninjas. Le Hokage, protecteur et chef du village, est reconnu comme étant le ninja le plus puissant.
+
+Il y a de cela douze ans, Kyûbi, un démon ayant la forme d'un renard à neuf queues, entreprit la destruction du village de Konoha, mais le quatrième Hokage neutralisa ce démon en le scellant dans le corps d'un nouveau-né : Naruto Uzumaki. Le quatrième Hokage se sacrifia ainsi pour sauver le village de Konoha.
+            </p>
+        
+
+            <div class= "partie">
+            <h3>Equipe 7</h3>
+            <div class="contenu_nar">
+            <p class="pcontent">
+            L'histoire commence pendant l'adolescence de Naruto, vers ses douze ans. Orphelin, éternel cancre et grand farceur, il fait toutes les bêtises possibles pour se faire remarquer. Son rêve : devenir Hokage afin d'être reconnu par les habitants de son village. <br>En effet, le démon scellé en lui a attisé la crainte et le mépris des autres villageois, qui, avec le temps, ne font plus de différence entre le Kyûbi et Naruto. Malgré cela, Naruto s'entraîne dur afin de devenir genin, le premier niveau chez les ninjas. <br>Après plusieurs essais, il arrive finalement à recevoir son bandeau frontal de Konoha et la promotion qui va avec. Il est alors inclus dans une équipe de trois, avec Sakura Haruno et le talentueux Sasuke Uchiwa.<br>L'Équipe Kakashi, connue aussi sous le nom d'Équipe 7, est une équipe dirigée par Kakashi Hatake et formée à la suite de la promotion en tant que genin de ses membres. Les membres furent choisis afin d'équilibrer les forces : Naruto, le pire élève de sa classe, bénéficierait ainsi de l'intelligence de Sakura et des talents de ninja de Sasuke. Sakura quant à elle se retrouverait avec des coéquipiers faits pour le combat, tandis que Sasuke se verrait forcé de travailler en équipe.<br>
+            <p>
+            <img src="images_naruto/team7.jpg" class="imgacc">
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Gaara hors de contrôle!</h3>
+            <div class="contenu_nar">
+            <p class="pcontent">
+
+            Suite à quelques missions, Kakashi considère les membres de son équipe prêts à devenir chūnin. Ce niveau, entre celui de genin et celui de jōnin, leur permettra d'accomplir des missions de plus grande importance. Cependant, un criminel exilé du village nommé Orochimaru interrompt l'examen pour détruire Konoha. Son arme principale pour cette opération est un jeune homme, Gaara, qui possède comme Naruto un démon. Naruto, aidé par ses amis, réussira à le vaincre, et le village sera sauvé grâce au sacrifice du troisième Hokage.<br>
+            
+            </p>
+            <img src="images_naruto/gara.gif" class="imgacc">
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>L'Akatsuki</h3>
+            <div class="contenu_nar">
+            <p class="pcontent">
+
+            
+            L'Akatsuki (暁, Akatsuki, Signifiant littéralement : « Aube » ou « Lever du jour ») est l'organisation criminelle la plus activement recherchée dans le monde ninja. Exceptés Konan et Nagato, ses membres sont tous des ninjas répertoriés au Bingo Book. <br>Son objectif affiché est la domination du monde et pour ce faire, leurs membres jouent les mercenaires auprès des différents pays et tentent de capturer tous les bijû afin de ramener Jûbi à la vie et d'instaurer une « paix » durable.<br>
+            Les membres de l'Akatsuki sont, à l'exception de Konan et Nagato, des ninjas déserteurs. Hormis Zetsu, l'espion de l'organisation capable de se séparer en deux, ils évoluent en binômes et effectuent leurs missions à l'international.<br> L'organisation se retrouve rarement au complet, le rituel d'extraction pouvant être géré à distance par le biais d'hologrammes. L'Akatsuki dispose également d'un certain nombre de repaires secrets pouvant servir de points de repli.<br>
+            </p>
+            <img src="images_naruto/akatsu.jpg" class="imgacc">
+            </div>
+            </div>
+
+            <div class= "partie">
+            <h3>Sasuke rejoint Orochimaru</h3>
+            <div class="contenu_nar">
+            <p class="pcontent">
+
+            
+En revenant au village, Naruto est confronté par Sasuke, qui se pense encore une fois inférieur, et qui quitte alors Konoha pour rejoindre Orochimaru pour acquérir la force nécessaire afin de vaincre Itachi et ainsi venger la destruction de son clan. Naruto tente de l'en empêcher, mais suite à son échec partira aussi s'entraîner avec Jiraya.<br>
+
+C’est un individu complexe. Assoiffé de pouvoir et de grandeur, il est malgré tout quelqu’un de calme et réfléchi. Il n’est pas particulièrement froid, et s’occupe de ceux qui l’intéressent avec soin. Ca se limite actuellement à Kabuto et Sasuke. <br>
+
+Il est coupable d’expérience sur des humains, aussi bien morts que vivants… Cela sous-entend aussi une imposante connaissance en science. C’est d’ailleurs ce que vise Orochimaru. Il veut pouvoir collecter la totalité des jutsus existants dans le monde pour ensuite être en mesure de créer de nouveaux. Orochimaru veut la connaissance parfaite pour le plaisir que représente de le posséder. C’est dans ce but qu’il convoite le corps de Sasuke : il est jeune, a du potentiel, et possède le Sharingan, ce qui accélèrerait sa quête de jutsus. Sasuke n’est finalement qu’un outil comme un autre.<br>
+
+            </p>
+            <img src="images_naruto/orochimaru.gif" class="imgacc">
+            </div>
+            </div>
+
+    <footer>
+        <div id="reseaux_sociaux">
+            <p>Nos réseaux sociaux : </p>
+            <div id = "im_r">
+                <img src="images/fb.png"> <img src="images/twitter.png"> <img src="images/insta.png" id="image_insta">
+            </div>
+            
+        </div>
+        <div id="remerciements">
+            <a href="quisommesnous.html"><p>Qui sommes-nous ?<br> @LAC</p></a>
+        </div>
+    </footer>
+
+
+    </body>
+
+</html>
